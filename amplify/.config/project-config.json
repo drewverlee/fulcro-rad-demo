@@ -1,0 +1,16 @@
+{
+  "projectName": "fulcroraddemo",
+  "version": "3.0",
+  "frontend": "javascript",
+  "javascript": {
+    "framework": "react",
+    "config": {
+      "SourceDir": ".",
+      "DistributionDir": "build",
+      "BuildCommand": "npx shadow-cljs release"
+    }
+  },
+  "providers": [
+    "awscloudformation"
+  ]
+}
