@@ -25,5 +25,9 @@
     "shadow-cljs": "2.8.110",
     "victory": "^34.3.6"
   },
-  "devDependencies": {}
+    "devDependencies": {},
+    "scripts" : {
+        "develop": "npx shadow-cljs watch main",
+        "release": "npx shadow-cljs release main"
+    }
 }
