@@ -3,7 +3,8 @@ frontend:
   phases:
     preBuild:
       commands:
-        - apt install openjdk-11-jdk
+        - amazon-linux-extras enable corretto11
+        - yum install java-11-amazon-corretto
         - curl -O https://download.clojure.org/install/linux-install-1.10.1.727.sh
         - chmod +x linux-install-1.10.1.727.sh
         - ./linux-install-1.10.1.727.sh
