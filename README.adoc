@@ -22,8 +22,7 @@ able to edit it, just start a shadow-cljs watch:
 
 [source, bash]
 -----
-$ yarn
-$ shadow-cljs watch main
+$ yarn develop
 -----
 
 if you don't have `yarn`, use `npm install` instead.
