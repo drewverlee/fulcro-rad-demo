@@ -16,7 +16,10 @@ compiled
 datahub.log*
 node_modules
 out
-resources/public/js
+#troubleshotting amplify
+#resources/public/js
+resources/public/js/test
+resources/public/js/main/cljs-runtime
 target
 .cpcache
 .shadow-cljs
