@@ -6,8 +6,8 @@
     "framework": "react",
     "config": {
       "SourceDir": ".",
-      "DistributionDir": "build",
-      "BuildCommand": "npx shadow-cljs release"
+      "DistributionDir": "resources/public",
+      "BuildCommand": "yarn release"
     }
   },
   "providers": [
