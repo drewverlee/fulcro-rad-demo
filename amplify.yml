@@ -9,11 +9,12 @@ frontend:
         - curl -O https://download.clojure.org/install/linux-install-1.10.1.727.sh
         - chmod +x linux-install-1.10.1.727.sh
         - ./linux-install-1.10.1.727.sh
+
         - yarn install
     build:
       commands: [yarn release]
   artifacts:
-    baseDirectory: /resources/public/
+    baseDirectory: resources/public/
     files:
       - '**/*'
   cache:
