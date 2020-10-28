@@ -1,17 +1,17 @@
 (ns com.example.components.ring-middleware
   (:require
-    [clojure.string :as str]
-    [com.example.components.blob-store :as bs]
-    [com.example.components.config :as config]
-    [com.example.components.parser :as parser]
-    [com.fulcrologic.fulcro.networking.file-upload :as file-upload]
-    [com.fulcrologic.fulcro.server.api-middleware :as server]
-    [com.fulcrologic.rad.blob :as blob]
-    [hiccup.page :refer [html5]]
-    [mount.core :refer [defstate]]
-    [ring.middleware.defaults :refer [wrap-defaults]]
-    [ring.util.response :as resp]
-    [taoensso.timbre :as log]))
+   [clojure.string :as str]
+   [com.example.components.blob-store :as bs]
+   [com.example.components.config :as config]
+   [com.example.components.parser :as parser]
+   [com.fulcrologic.fulcro.networking.file-upload :as file-upload]
+   [com.fulcrologic.fulcro.server.api-middleware :as server]
+   [com.fulcrologic.rad.blob :as blob]
+   [hiccup.page :refer [html5]]
+   [mount.core :refer [defstate]]
+   [ring.middleware.defaults :refer [wrap-defaults]]
+   [ring.util.response :as resp]
+   [taoensso.timbre :as log]))
 
 (defn index [csrf-token]
   (html5
@@ -24,8 +24,7 @@
       [:link {:href "https://cdn.jsdelivr.net/npm/fomantic-ui@2.7.8/dist/semantic.min.css"
               :rel  "stylesheet"}]
       [:link {:rel "shortcut icon" :href "data:image/x-icon;," :type "image/x-icon"}]
-      ;;TODO this is likely causing a compilation issue
-      [:script (str "var fulcro_network_csrf_token = '" (or csrf-token "") "';")]]
+      [:script (str "var fulcro_network_csrf_token = '" csrf-token "';")]]
      [:body
       [:div#app]
       [:script {:src "/js/main/main.js"}]]]))
