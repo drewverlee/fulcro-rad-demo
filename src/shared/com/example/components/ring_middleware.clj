@@ -25,7 +25,7 @@
               :rel  "stylesheet"}]
       [:link {:rel "shortcut icon" :href "data:image/x-icon;," :type "image/x-icon"}]
       ;;TODO this is likely causing a compilation issue
-      #_[:script (str "var fulcro_network_csrf_token = '" csrf-token "';")]]
+      [:script (str "var fulcro_network_csrf_token = '" (or csrf-token "") "';")]]
      [:body
       [:div#app]
       [:script {:src "/js/main/main.js"}]]]))
